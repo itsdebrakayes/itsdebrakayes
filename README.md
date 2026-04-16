@@ -1,9 +1,31 @@
 # 👋 Hey, I'm itsdebrakayes
 
-**Developer. Creator. Builder.**
+**Frontend Developer. UI/UX Enthusiast. Creator.**
 
 [![PRO](https://img.shields.io/badge/GitHub-PRO-blue?style=flat-square)](https://github.com/itsdebrakayes)
 [![Pull Shark](https://img.shields.io/badge/Achievement-Pull%20Shark-orange?style=flat-square)](https://github.com/itsdebrakayes)
+
+---
+
+### 🖤 About Me
+
+I'm a **frontend-focused developer** with a strong eye for design and a deep appreciation for intuitive user experiences.
+
+- 🎓 Final-year Computer Science student @ UWI Mona
+- 🎨 Passionate about **UI/UX and modern frontend design**
+- 🌍 Focused on building systems that are both **functional and visually refined**
+- 🇯🇲 Jamaican creative bringing culture, clarity, and precision into tech
+
+I don't just build applications.
+I build experiences that feel **intentional, responsive, and polished**.
+
+---
+
+### 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,ts,js,tailwind,html,css,nodejs,express,supabase,mysql,git,azure" />
+</p>
 
 ---
 
@@ -16,14 +38,6 @@
 | **CACTUS** | Campus safety app | [View Repo](https://github.com/itsdebrakayes) |
 | **JamAI** | AI-powered music creation | [View Repo](https://github.com/itsdebrakayes) |
 | **YaadExplorer** | Jamaican cultural discovery | [View Repo](https://github.com/itsdebrakayes) |
-
----
-
-### 🛠️ Tech Stack
-
-**Frontend:** React · TypeScript · Tailwind CSS · Next.js · Framer Motion  
-**Backend:** Node.js · Python · Firebase · MongoDB · PostgreSQL  
-**Tools:** Git · Docker · Figma · Vercel
 
 ---
 
