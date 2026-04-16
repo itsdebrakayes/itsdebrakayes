@@ -3,8 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import StickyTextScrub from "@/components/StickyTextScrub";
 import HorizontalScroll from "@/components/HorizontalScroll";
 import GlassCard from "@/components/GlassCard";
-import BackgroundOrbs from "@/components/BackgroundOrbs";
-import ThemeToggle from "@/components/ThemeToggle";
 import ScrollReveal from "@/components/ScrollReveal";
 import CountUpDisplay from "@/components/CountUpNumber";
 import {
@@ -28,9 +26,8 @@ const PROJECTS = [
     description:
       "A full-scale production company website — live and serving clients. Built with modern web technologies and a cinematic design language.",
     techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    siteUrl: "https://danarkproductions.com",
-    previewImage:
-      "https://image.thum.io/get/width/800/crop/600/https://danarkproductions.com",
+    siteUrl: "https://danarkprod.com",
+    previewImage: "https://image.thum.io/get/width/800/crop/600/https://danarkproductions.com",
     gradient: "warm" as const,
   },
   {
@@ -39,8 +36,7 @@ const PROJECTS = [
       "A smart queue management and ordering platform — live and streamlining customer experiences with intuitive real-time flows.",
     techStack: ["React", "TypeScript", "Tailwind CSS"],
     siteUrl: "https://qmenow.lovable.app",
-    previewImage:
-      "https://image.thum.io/get/width/800/crop/600/https://qmenow.lovable.app",
+    previewImage: "https://image.thum.io/get/width/800/crop/600/https://qmenow.lovable.app",
     gradient: "warm" as const,
   },
   {
@@ -114,8 +110,7 @@ const HeroSection = () => {
         <div
           className="absolute left-1/2 top-1/3 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30 blur-[120px]"
           style={{
-            background:
-              "radial-gradient(circle, hsl(220, 90%, 56%) 0%, hsl(270, 80%, 60%) 50%, transparent 70%)",
+            background: "radial-gradient(circle, hsl(220, 90%, 56%) 0%, hsl(270, 80%, 60%) 50%, transparent 70%)",
           }}
         />
       </div>
@@ -171,9 +166,7 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.8 }}
         >
-          <span className="text-xs uppercase tracking-widest text-muted-foreground">
-            Scroll
-          </span>
+          <span className="text-xs uppercase tracking-widest text-muted-foreground">Scroll</span>
           <motion.div
             className="h-8 w-[1px] bg-muted-foreground/40"
             animate={{ scaleY: [0, 1, 0] }}
@@ -197,9 +190,7 @@ const AboutSection = () => {
       {/* Editorial intro */}
       <div className="px-6 py-24">
         <ScrollReveal className="text-center">
-          <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
-            Who I Am
-          </h2>
+          <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">Who I Am</h2>
           <p className="mt-4 text-4xl font-bold md:text-6xl">
             <span className="text-gradient-blue">About.</span>
           </p>
@@ -257,9 +248,7 @@ const TechStackSection = () => {
   return (
     <section className="px-6 py-32">
       <ScrollReveal className="text-center">
-        <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
-          Technologies
-        </h2>
+        <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">Technologies</h2>
         <p className="mt-4 text-4xl font-bold md:text-6xl">
           <span className="text-gradient-warm">Stack.</span>
         </p>
@@ -269,9 +258,7 @@ const TechStackSection = () => {
         {categories.map((cat) => (
           <div key={cat}>
             <ScrollReveal>
-              <h3 className="mb-6 text-xs font-medium uppercase tracking-widest text-muted-foreground">
-                {cat}
-              </h3>
+              <h3 className="mb-6 text-xs font-medium uppercase tracking-widest text-muted-foreground">{cat}</h3>
             </ScrollReveal>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
               {TECH_STACK.filter((t) => t.category === cat).map((tech, i) => {
@@ -284,12 +271,8 @@ const TechStackSection = () => {
                       <div className="tech-card__icon">
                         <Icon size={20} />
                       </div>
-                      <span className="text-sm font-medium text-foreground">
-                        {tech.name}
-                      </span>
-                      <p className="mt-1 text-[11px] text-muted-foreground">
-                        {tech.category}
-                      </p>
+                      <span className="text-sm font-medium text-foreground">{tech.name}</span>
+                      <p className="mt-1 text-[11px] text-muted-foreground">{tech.category}</p>
                     </div>
                   </ScrollReveal>
                 );
@@ -307,9 +290,7 @@ const StatsSection = () => {
   return (
     <section className="px-6 py-32">
       <ScrollReveal className="text-center">
-        <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
-          By the Numbers
-        </h2>
+        <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">By the Numbers</h2>
       </ScrollReveal>
 
       <div className="mx-auto mt-20 grid max-w-4xl grid-cols-1 gap-16 md:grid-cols-3">
@@ -345,9 +326,7 @@ const Footer = () => {
           </div>
         </ScrollReveal>
 
-        <p className="text-xs text-muted-foreground/50">
-          © {new Date().getFullYear()} Debra-Kaye Smith
-        </p>
+        <p className="text-xs text-muted-foreground/50">© {new Date().getFullYear()} Debra-Kaye Smith</p>
       </div>
     </footer>
   );
@@ -356,9 +335,7 @@ const Footer = () => {
 // ─── Main Page ───────────────────────────────────────────────────
 const Index = () => {
   return (
-    <main className="relative bg-background">
-      <BackgroundOrbs />
-      <ThemeToggle />
+    <main className="bg-background">
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
