@@ -66,18 +66,18 @@ const PROJECTS = [
 ];
 
 const TECH_STACK = [
-  { name: "React", category: "Frontend", icon: Code2 },
-  { name: "TypeScript", category: "Frontend", icon: FileCode },
-  { name: "JavaScript", category: "Frontend", icon: FileJson },
-  { name: "Tailwind CSS", category: "Frontend", icon: Palette },
-  { name: "HTML", category: "Frontend", icon: LayoutTemplate },
-  { name: "CSS", category: "Frontend", icon: PaintBucket },
-  { name: "Node.js", category: "Backend", icon: Server },
-  { name: "Express", category: "Backend", icon: Unplug },
-  { name: "Supabase", category: "Backend", icon: DatabaseZap },
-  { name: "MySQL", category: "Backend", icon: Database },
-  { name: "Git", category: "Tools", icon: GitBranch },
-  { name: "Azure", category: "Tools", icon: Cloud },
+  { name: "React", description: "Building dynamic, component-driven interfaces with optimal performance and reusability.", category: "Frontend", icon: Code2 },
+  { name: "TypeScript", description: "Type-safe development for scalable, maintainable codebases and fewer runtime errors.", category: "Frontend", icon: FileCode },
+  { name: "JavaScript", description: "Core scripting for interactive web experiences, from DOM manipulation to async workflows.", category: "Frontend", icon: FileJson },
+  { name: "Tailwind CSS", description: "Utility-first styling for rapid, consistent UI development with full design control.", category: "Frontend", icon: Palette },
+  { name: "HTML", description: "Semantic markup for accessible, SEO-friendly web structures.", category: "Frontend", icon: LayoutTemplate },
+  { name: "CSS", description: "Custom styling with animations, responsive layouts, and modern design techniques.", category: "Frontend", icon: PaintBucket },
+  { name: "Node.js", description: "Server-side JavaScript for building fast, scalable backend services and APIs.", category: "Backend", icon: Server },
+  { name: "Express", description: "Lightweight framework for RESTful APIs and middleware-driven server architecture.", category: "Backend", icon: Unplug },
+  { name: "Supabase", description: "Open-source backend with real-time databases, auth, and instant APIs.", category: "Backend", icon: DatabaseZap },
+  { name: "MySQL", description: "Relational database management for structured data and complex queries.", category: "Backend", icon: Database },
+  { name: "Git", description: "Version control for collaborative development and clean project history.", category: "Tools", icon: GitBranch },
+  { name: "Azure", description: "Cloud computing platform for deployment, scaling, and DevOps workflows.", category: "Tools", icon: Cloud },
 ];
 
 const IDENTITY_BADGES = [
@@ -87,10 +87,11 @@ const IDENTITY_BADGES = [
   { label: "💻 CS Graduate", color: "blue" },
 ];
 
-const CATEGORY_TONE: Record<string, string> = {
-  Frontend: "blue",
-  Backend: "teal",
-  Tools: "purple",
+const ABOUT_SKILLS: Record<string, string[]> = {
+  Frontend: ["React", "JavaScript", "TypeScript", "Tailwind CSS"],
+  Backend: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
+  Design: ["UI/UX Design", "Figma", "Responsive Design", "Prototyping"],
+  Tools: ["Git", "Docker", "AWS", "Azure", "REST APIs"],
 };
 
 // ─── Hero Section ────────────────────────────────────────────────
@@ -186,35 +187,74 @@ const HeroSection = () => {
 // ─── About Section ───────────────────────────────────────────────
 const AboutSection = () => {
   return (
-    <section className="relative">
-      {/* Editorial intro */}
-      <div className="px-6 py-24">
-        <ScrollReveal className="text-center">
-          <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">Who I Am</h2>
-          <p className="mt-4 text-4xl font-bold md:text-6xl">
-            <span className="text-gradient-blue">About.</span>
-          </p>
-        </ScrollReveal>
+    <section className="relative px-6 py-32">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
+          {/* Left — Visual / Experience card */}
+          <ScrollReveal>
+            <div className="relative">
+              <div className="tech-card" style={{ minHeight: 320 }}>
+                <div className="tech-card__accent" />
+                <div className="flex h-full flex-col items-center justify-center text-center">
+                  <motion.div
+                    className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl"
+                    style={{ background: "hsla(30, 95%, 55%, 0.12)", border: "1px solid hsla(30, 95%, 55%, 0.2)" }}
+                    animate={{ rotate: [0, 5, -5, 0] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <Code2 size={36} style={{ color: "hsl(30, 95%, 55%)" }} />
+                  </motion.div>
+                  <p className="text-5xl font-bold text-foreground">5+</p>
+                  <p className="mt-1 text-sm font-medium text-muted-foreground">Years Experience</p>
 
-        {/* Gradient divider */}
-        <div className="mx-auto mt-10 h-[1px] max-w-md bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+                  <div className="mx-auto mt-8 h-[1px] w-3/4 bg-gradient-to-r from-transparent via-[hsla(30,95%,55%,0.3)] to-transparent" />
 
-        {/* Highlight pills */}
-        <ScrollReveal delay={0.15}>
-          <div className="mx-auto mt-10 flex flex-wrap justify-center gap-4">
-            {["5+ Years", "UWI Mona", "Full Stack"].map((item) => (
-              <span
-                key={item}
-                className="glass-subtle rounded-full px-5 py-2 text-sm font-medium text-muted-foreground"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </ScrollReveal>
+                  <div className="mt-6 flex flex-wrap justify-center gap-2">
+                    {["React", "TypeScript", "Node.js", "Tailwind"].map((t) => (
+                      <span key={t} className="rounded-full border border-[hsla(30,95%,55%,0.2)] bg-[hsla(30,95%,55%,0.08)] px-3 py-1 text-xs font-medium text-muted-foreground">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Right — Text content */}
+          <ScrollReveal delay={0.15}>
+            <div>
+              <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">Who I Am</h2>
+              <p className="mt-4 text-4xl font-bold md:text-5xl">
+                About <span className="text-gradient-warm">Me</span>
+              </p>
+              <p className="mt-2 text-sm font-medium text-muted-foreground">Full-Stack Developer & Creative</p>
+
+              <p className="mt-6 leading-relaxed text-muted-foreground">
+                I create digital experiences that combine innovative technology with
+                elegant design. With expertise in both frontend and backend development,
+                I deliver solutions that are visually stunning, highly functional, and
+                user-friendly. Jamaican creative bringing culture, clarity, and precision
+                into every project.
+              </p>
+
+              <div className="mt-8 grid grid-cols-2 gap-6">
+                {Object.entries(ABOUT_SKILLS).map(([category, skills]) => (
+                  <div key={category} className="about-skill-category">
+                    <div className="about-skill-dot" />
+                    <div>
+                      <p className="text-sm font-bold text-foreground">{category}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                        {skills.join(", ")}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
       </div>
-
-      <StickyTextScrub text="I'm a full-stack developer with a strong eye for design and a deep appreciation for intuitive user experiences. Final-year Computer Science student at UWI Mona. Jamaican creative bringing culture, clarity, and precision into tech. I don't just build applications — I build experiences that feel intentional, responsive, and polished." />
     </section>
   );
 };
@@ -254,25 +294,24 @@ const TechStackSection = () => {
         </p>
       </ScrollReveal>
 
-      <div className="mx-auto mt-20 max-w-5xl space-y-16">
+      <div className="mx-auto mt-20 max-w-6xl space-y-16">
         {categories.map((cat) => (
           <div key={cat}>
             <ScrollReveal>
               <h3 className="mb-6 text-xs font-medium uppercase tracking-widest text-muted-foreground">{cat}</h3>
             </ScrollReveal>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {TECH_STACK.filter((t) => t.category === cat).map((tech, i) => {
-                const tone = CATEGORY_TONE[tech.category] || "blue";
                 const Icon = tech.icon;
                 return (
                   <ScrollReveal key={tech.name} delay={i * 0.08}>
-                    <div className={`tech-card tech-card--${tone}`}>
+                    <div className="tech-card">
                       <div className="tech-card__accent" />
                       <div className="tech-card__icon">
                         <Icon size={20} />
                       </div>
-                      <span className="text-sm font-medium text-foreground">{tech.name}</span>
-                      <p className="mt-1 text-[11px] text-muted-foreground">{tech.category}</p>
+                      <span className="tech-card__title">{tech.name}</span>
+                      <p className="tech-card__desc">{tech.description}</p>
                     </div>
                   </ScrollReveal>
                 );
