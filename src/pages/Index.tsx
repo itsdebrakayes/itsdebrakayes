@@ -356,7 +356,9 @@ const Footer = () => {
 // ─── Main Page ───────────────────────────────────────────────────
 const Index = () => {
   return (
-    <main className="bg-background">
+    <main className="relative bg-background">
+      <BackgroundOrbs />
+      <ThemeToggle />
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
