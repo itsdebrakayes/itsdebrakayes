@@ -187,35 +187,74 @@ const HeroSection = () => {
 // ─── About Section ───────────────────────────────────────────────
 const AboutSection = () => {
   return (
-    <section className="relative">
-      {/* Editorial intro */}
-      <div className="px-6 py-24">
-        <ScrollReveal className="text-center">
-          <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">Who I Am</h2>
-          <p className="mt-4 text-4xl font-bold md:text-6xl">
-            <span className="text-gradient-blue">About.</span>
-          </p>
-        </ScrollReveal>
+    <section className="relative px-6 py-32">
+      <div className="mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
+          {/* Left — Visual / Experience card */}
+          <ScrollReveal>
+            <div className="relative">
+              <div className="tech-card" style={{ minHeight: 320 }}>
+                <div className="tech-card__accent" />
+                <div className="flex h-full flex-col items-center justify-center text-center">
+                  <motion.div
+                    className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl"
+                    style={{ background: "hsla(30, 95%, 55%, 0.12)", border: "1px solid hsla(30, 95%, 55%, 0.2)" }}
+                    animate={{ rotate: [0, 5, -5, 0] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <Code2 size={36} style={{ color: "hsl(30, 95%, 55%)" }} />
+                  </motion.div>
+                  <p className="text-5xl font-bold text-foreground">5+</p>
+                  <p className="mt-1 text-sm font-medium text-muted-foreground">Years Experience</p>
 
-        {/* Gradient divider */}
-        <div className="mx-auto mt-10 h-[1px] max-w-md bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+                  <div className="mx-auto mt-8 h-[1px] w-3/4 bg-gradient-to-r from-transparent via-[hsla(30,95%,55%,0.3)] to-transparent" />
 
-        {/* Highlight pills */}
-        <ScrollReveal delay={0.15}>
-          <div className="mx-auto mt-10 flex flex-wrap justify-center gap-4">
-            {["5+ Years", "UWI Mona", "Full Stack"].map((item) => (
-              <span
-                key={item}
-                className="glass-subtle rounded-full px-5 py-2 text-sm font-medium text-muted-foreground"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </ScrollReveal>
+                  <div className="mt-6 flex flex-wrap justify-center gap-2">
+                    {["React", "TypeScript", "Node.js", "Tailwind"].map((t) => (
+                      <span key={t} className="rounded-full border border-[hsla(30,95%,55%,0.2)] bg-[hsla(30,95%,55%,0.08)] px-3 py-1 text-xs font-medium text-muted-foreground">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Right — Text content */}
+          <ScrollReveal delay={0.15}>
+            <div>
+              <h2 className="text-sm font-medium uppercase tracking-widest text-muted-foreground">Who I Am</h2>
+              <p className="mt-4 text-4xl font-bold md:text-5xl">
+                About <span className="text-gradient-warm">Me</span>
+              </p>
+              <p className="mt-2 text-sm font-medium text-muted-foreground">Full-Stack Developer & Creative</p>
+
+              <p className="mt-6 leading-relaxed text-muted-foreground">
+                I create digital experiences that combine innovative technology with
+                elegant design. With expertise in both frontend and backend development,
+                I deliver solutions that are visually stunning, highly functional, and
+                user-friendly. Jamaican creative bringing culture, clarity, and precision
+                into every project.
+              </p>
+
+              <div className="mt-8 grid grid-cols-2 gap-6">
+                {Object.entries(ABOUT_SKILLS).map(([category, skills]) => (
+                  <div key={category} className="about-skill-category">
+                    <div className="about-skill-dot" />
+                    <div>
+                      <p className="text-sm font-bold text-foreground">{category}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                        {skills.join(", ")}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
       </div>
-
-      <StickyTextScrub text="I'm a full-stack developer with a strong eye for design and a deep appreciation for intuitive user experiences. Final-year Computer Science student at UWI Mona. Jamaican creative bringing culture, clarity, and precision into tech. I don't just build applications — I build experiences that feel intentional, responsive, and polished." />
     </section>
   );
 };
