@@ -54,18 +54,16 @@ const PROJECTS = [
 const TECH_STACK = [
   { name: "React", category: "Frontend" },
   { name: "TypeScript", category: "Frontend" },
+  { name: "JavaScript", category: "Frontend" },
   { name: "Tailwind CSS", category: "Frontend" },
-  { name: "Framer Motion", category: "Frontend" },
-  { name: "Next.js", category: "Frontend" },
+  { name: "HTML", category: "Frontend" },
+  { name: "CSS", category: "Frontend" },
   { name: "Node.js", category: "Backend" },
-  { name: "Python", category: "Backend" },
-  { name: "Firebase", category: "Backend" },
-  { name: "MongoDB", category: "Backend" },
-  { name: "PostgreSQL", category: "Backend" },
+  { name: "Express", category: "Backend" },
+  { name: "Supabase", category: "Backend" },
+  { name: "MySQL", category: "Backend" },
   { name: "Git", category: "Tools" },
-  { name: "Figma", category: "Tools" },
-  { name: "Docker", category: "Tools" },
-  { name: "Vercel", category: "Tools" },
+  { name: "Azure", category: "Tools" },
 ];
 
 const BADGES = [
@@ -114,7 +112,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
           >
-            Developer. Creator. Builder.
+            Frontend Developer. UI/UX Enthusiast. Creator.
           </motion.p>
 
           <motion.div
@@ -161,7 +159,7 @@ const AboutSection = () => {
   return (
     <section className="relative">
       <StickyTextScrub
-        text="I'm a developer and creative technologist who builds products that people love. From production company websites to AI-powered music tools, I craft experiences that blend design and engineering into something unforgettable."
+        text="I'm a frontend-focused developer with a strong eye for design and a deep appreciation for intuitive user experiences. Final-year Computer Science student at UWI Mona. Jamaican creative bringing culture, clarity, and precision into tech. I don't just build applications — I build experiences that feel intentional, responsive, and polished."
       />
     </section>
   );
