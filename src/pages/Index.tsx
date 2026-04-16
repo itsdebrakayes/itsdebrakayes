@@ -87,10 +87,11 @@ const IDENTITY_BADGES = [
   { label: "💻 CS Graduate", color: "blue" },
 ];
 
-const CATEGORY_TONE: Record<string, string> = {
-  Frontend: "blue",
-  Backend: "teal",
-  Tools: "purple",
+const ABOUT_SKILLS: Record<string, string[]> = {
+  Frontend: ["React", "JavaScript", "TypeScript", "Tailwind CSS"],
+  Backend: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
+  Design: ["UI/UX Design", "Figma", "Responsive Design", "Prototyping"],
+  Tools: ["Git", "Docker", "AWS", "Azure", "REST APIs"],
 };
 
 // ─── Hero Section ────────────────────────────────────────────────
@@ -254,25 +255,24 @@ const TechStackSection = () => {
         </p>
       </ScrollReveal>
 
-      <div className="mx-auto mt-20 max-w-5xl space-y-16">
+      <div className="mx-auto mt-20 max-w-6xl space-y-16">
         {categories.map((cat) => (
           <div key={cat}>
             <ScrollReveal>
               <h3 className="mb-6 text-xs font-medium uppercase tracking-widest text-muted-foreground">{cat}</h3>
             </ScrollReveal>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {TECH_STACK.filter((t) => t.category === cat).map((tech, i) => {
-                const tone = CATEGORY_TONE[tech.category] || "blue";
                 const Icon = tech.icon;
                 return (
                   <ScrollReveal key={tech.name} delay={i * 0.08}>
-                    <div className={`tech-card tech-card--${tone}`}>
+                    <div className="tech-card">
                       <div className="tech-card__accent" />
                       <div className="tech-card__icon">
                         <Icon size={20} />
                       </div>
-                      <span className="text-sm font-medium text-foreground">{tech.name}</span>
-                      <p className="mt-1 text-[11px] text-muted-foreground">{tech.category}</p>
+                      <span className="tech-card__title">{tech.name}</span>
+                      <p className="tech-card__desc">{tech.description}</p>
                     </div>
                   </ScrollReveal>
                 );
