@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import StickyTextScrub from "@/components/StickyTextScrub";
 import HorizontalScroll from "@/components/HorizontalScroll";
 import GlassCard from "@/components/GlassCard";
+import BackgroundOrbs from "@/components/BackgroundOrbs";
+import ThemeToggle from "@/components/ThemeToggle";
 import ScrollReveal from "@/components/ScrollReveal";
 import CountUpDisplay from "@/components/CountUpNumber";
 import {
@@ -354,7 +356,9 @@ const Footer = () => {
 // ─── Main Page ───────────────────────────────────────────────────
 const Index = () => {
   return (
-    <main className="bg-background">
+    <main className="relative bg-background">
+      <BackgroundOrbs />
+      <ThemeToggle />
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
