@@ -66,18 +66,18 @@ const PROJECTS = [
 ];
 
 const TECH_STACK = [
-  { name: "React", category: "Frontend", icon: Code2 },
-  { name: "TypeScript", category: "Frontend", icon: FileCode },
-  { name: "JavaScript", category: "Frontend", icon: FileJson },
-  { name: "Tailwind CSS", category: "Frontend", icon: Palette },
-  { name: "HTML", category: "Frontend", icon: LayoutTemplate },
-  { name: "CSS", category: "Frontend", icon: PaintBucket },
-  { name: "Node.js", category: "Backend", icon: Server },
-  { name: "Express", category: "Backend", icon: Unplug },
-  { name: "Supabase", category: "Backend", icon: DatabaseZap },
-  { name: "MySQL", category: "Backend", icon: Database },
-  { name: "Git", category: "Tools", icon: GitBranch },
-  { name: "Azure", category: "Tools", icon: Cloud },
+  { name: "React", description: "Building dynamic, component-driven interfaces with optimal performance and reusability.", category: "Frontend", icon: Code2 },
+  { name: "TypeScript", description: "Type-safe development for scalable, maintainable codebases and fewer runtime errors.", category: "Frontend", icon: FileCode },
+  { name: "JavaScript", description: "Core scripting for interactive web experiences, from DOM manipulation to async workflows.", category: "Frontend", icon: FileJson },
+  { name: "Tailwind CSS", description: "Utility-first styling for rapid, consistent UI development with full design control.", category: "Frontend", icon: Palette },
+  { name: "HTML", description: "Semantic markup for accessible, SEO-friendly web structures.", category: "Frontend", icon: LayoutTemplate },
+  { name: "CSS", description: "Custom styling with animations, responsive layouts, and modern design techniques.", category: "Frontend", icon: PaintBucket },
+  { name: "Node.js", description: "Server-side JavaScript for building fast, scalable backend services and APIs.", category: "Backend", icon: Server },
+  { name: "Express", description: "Lightweight framework for RESTful APIs and middleware-driven server architecture.", category: "Backend", icon: Unplug },
+  { name: "Supabase", description: "Open-source backend with real-time databases, auth, and instant APIs.", category: "Backend", icon: DatabaseZap },
+  { name: "MySQL", description: "Relational database management for structured data and complex queries.", category: "Backend", icon: Database },
+  { name: "Git", description: "Version control for collaborative development and clean project history.", category: "Tools", icon: GitBranch },
+  { name: "Azure", description: "Cloud computing platform for deployment, scaling, and DevOps workflows.", category: "Tools", icon: Cloud },
 ];
 
 const IDENTITY_BADGES = [
