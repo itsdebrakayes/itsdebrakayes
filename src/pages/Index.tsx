@@ -124,8 +124,10 @@ const HeroSection = () => {
             {BADGES.map((b) => (
               <span
                 key={b.label}
-                className={`glass rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-wider ${
-                  b.color === "blue" ? "text-gradient-blue" : "text-gradient-warm"
+                className={`glass rounded-full px-6 py-2.5 text-sm font-semibold uppercase tracking-wider md:text-base ${
+                  b.color === "blue"
+                    ? "text-gradient-blue shadow-[0_0_20px_hsl(220,90%,56%,0.3)]"
+                    : "text-gradient-warm shadow-[0_0_20px_hsl(30,90%,56%,0.3)]"
                 }`}
               >
                 {b.label}

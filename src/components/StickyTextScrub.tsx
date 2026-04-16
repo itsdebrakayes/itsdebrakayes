@@ -16,10 +16,10 @@ const StickyTextScrub = ({ text, className = "" }: StickyTextScrubProps) => {
   const words = text.split(" ");
 
   return (
-    <div ref={containerRef} className="relative" style={{ height: "300vh" }}>
+    <div ref={containerRef} className="relative" style={{ height: "180vh" }}>
       <div className="sticky top-0 flex min-h-screen items-center justify-center px-6">
         <p
-          className={`max-w-4xl text-3xl font-medium leading-relaxed md:text-5xl md:leading-snug ${className}`}
+          className={`max-w-5xl text-4xl font-light leading-tight tracking-tight md:text-6xl md:leading-[1.15] ${className}`}
         >
           {words.map((word, i) => {
             const start = i / words.length;
@@ -40,14 +40,27 @@ interface WordProps {
 
 const Word = ({ word, range, progress }: WordProps) => {
   const opacity = useTransform(progress, range, [0.15, 1]);
-  const color = useTransform(progress, range, [
-    "hsl(0, 0%, 30%)",
-    "hsl(0, 0%, 100%)",
-  ]);
+  const isActive = useTransform(progress, (v: number) => v >= range[0] ? 1 : 0);
 
   return (
-    <motion.span style={{ opacity, color }} className="mr-[0.25em] inline-block">
-      {word}
+    <motion.span
+      style={{ opacity }}
+      className="mr-[0.25em] inline-block"
+    >
+      <motion.span
+        style={{
+          color: useTransform(isActive, [0, 1], ["hsl(0,0%,30%)", "transparent"]),
+          backgroundImage: useTransform(isActive, (v: number) =>
+            v >= 1
+              ? "linear-gradient(135deg, hsl(220,90%,56%), hsl(270,80%,60%))"
+              : "none"
+          ),
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+        }}
+      >
+        {word}
+      </motion.span>
     </motion.span>
   );
 };
