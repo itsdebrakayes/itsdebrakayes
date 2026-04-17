@@ -51,9 +51,9 @@ A cinematic production company website focused on storytelling and visual flow
 </td>
 <td width="50%">
 
-### 🍽️ Cumino  
-A clean, modern culinary platform with emphasis on UI clarity  
-🔗 https://cumino.com  
+  ### QMe-Now  
+An app built to improve operational efficiency through smart queues and smart predictions 
+🔗https://qmenow.lovable.app
 
 </td>
 </tr>
@@ -63,14 +63,14 @@ A clean, modern culinary platform with emphasis on UI clarity
 
 ### 🗺️ CACTUS  
 Campus safety and navigation system with real-time features  
-🔗 https://github.com/itsdebrakayes  
+🔗 https://github.com/itsdebrakayes/CACTUS-capstone 
 
 </td>
 <td width="50%">
 
 ### 🧠 JamAI  
 AI-powered music and creative assistant platform  
-🔗 https://github.com/itsdebrakayes  
+🔗 https://github.com/itsdebrakayes/jamai 
 
 </td>
 </tr>
