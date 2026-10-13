@@ -54,9 +54,9 @@ A cinematic production company website focused on storytelling and visual flow
 </td>
 <td width="50%">
 
-  ### QMe-Now  
-An app built to improve operational efficiency through smart queues and smart predictions 
-🔗https://qmenow.lovable.app
+  ### Lyne  
+Lyne™ — Spend less time waiting. A connected platform for digital queue management, real-time tracking, and smarter service delivery.
+🔗https://www.uselyne.com
 
 </td>
 </tr>
