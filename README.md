@@ -22,8 +22,11 @@
 ## 🖤 About
 
 🎓 Computer Science Graduate - UWI Mona 2026 (Upper Second Class Honor)
+
 🎨 Frontend-focused with a strong eye for **UI/UX and visual detail**  
+
 🌍 Building systems that feel as good as they function  
+
 🇯🇲 Jamaican creative bringing culture, clarity & precision into tech  
 
 > I don’t just build applications — I design experiences that feel **intentional, responsive, and refined**.
